@@ -31,8 +31,11 @@
  *****************************************************************************/
 
 // CPU info
-#define NUM_CORES 4
-#define MAX_HART_ID 4
+#ifndef NUM_CORES
+#define NUM_CORES 1
+#endif
+#define MAX_HART_ID NUM_CORES
+
 #define GLOBAL_INT_SIZE 59
 #define GLOBAL_INT_MAX_PRIORITY 7
 #define RTC_FREQUENCY_HZ TL_CLK

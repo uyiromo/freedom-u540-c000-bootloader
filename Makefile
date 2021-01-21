@@ -122,7 +122,7 @@ else
 endif
 
 %.o: %.c $(H)
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -DNUM_CORES=$(NUM_CORES) -o $@ -c $<
 
 %.hex: %.bin
 	od -t x4 -An -w4 -v $< > $@
