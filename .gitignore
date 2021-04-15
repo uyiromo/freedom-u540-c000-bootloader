@@ -1,8 +1,10 @@
 *.elf
 *.swp
 *.swo
-*/*.o
+**/*.o
 *.dtb
 *.bin
 *.asm
+*.hex
+tl_clock.h
 lib/version.c
